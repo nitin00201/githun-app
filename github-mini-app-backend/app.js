@@ -2,7 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import githubRoutes from "./routes/githubRoutes.js";
-import { connectDB } from "./config/db.js"; 
+import { connectDB } from "./config/db.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
+
 
 dotenv.config();
 const app = express();
@@ -15,6 +17,8 @@ connectDB();
 
 // routes
 app.use("/api", githubRoutes);
+app.use("/api", dashboardRoutes);
+
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
