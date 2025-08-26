@@ -1,0 +1,5 @@
+github-mini-app-backend/node_modules
+github-mini-app-backend/dist
+github-mini-app-frontend/node_modules
+github-mini-app-frontend/dist
+github-mini-app-backend/.env
